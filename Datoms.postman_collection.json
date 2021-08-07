@@ -1,0 +1,382 @@
+{
+	"info": {
+		"_postman_id": "92614d89-e6d3-4561-b305-13420542d28c",
+		"name": "Datoms",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ByCityName",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\",function(){pm.response.to.have.status(200);\r",
+							"})\r",
+							"\r",
+							"\r",
+							"pm.test(\"Coordinates\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"coord\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"weather\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"weather\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"wind\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"wind\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"clouds\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"clouds\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?q=Chennai&appid=44ee963ea8384bd561e7cce2a9b68f08",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "Chennai"
+						},
+						{
+							"key": "appid",
+							"value": "44ee963ea8384bd561e7cce2a9b68f08"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ByCityID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\",function(){pm.response.to.have.status(200);\r",
+							"})\r",
+							"\r",
+							"\r",
+							"pm.test(\"Coordinates\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"coord\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"weather\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"weather\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"wind\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"wind\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"clouds\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"clouds\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?id=1264527&appid=44ee963ea8384bd561e7cce2a9b68f08",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1264527"
+						},
+						{
+							"key": "appid",
+							"value": "44ee963ea8384bd561e7cce2a9b68f08"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bygeographiccoordinates",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\",function(){pm.response.to.have.status(200);\r",
+							"})\r",
+							"\r",
+							"\r",
+							"pm.test(\"Coordinates\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"coord\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"weather\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"weather\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"wind\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"wind\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"clouds\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"clouds\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?lat=80.2785&lon=13.0878&appid=44ee963ea8384bd561e7cce2a9b68f08",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "80.2785"
+						},
+						{
+							"key": "lon",
+							"value": "13.0878"
+						},
+						{
+							"key": "appid",
+							"value": "44ee963ea8384bd561e7cce2a9b68f08"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ByZIPcode",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\",function(){pm.response.to.have.status(200);\r",
+							"})\r",
+							"\r",
+							"\r",
+							"pm.test(\"Coordinates\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"coord\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"weather\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"weather\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"wind\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"wind\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"clouds\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"clouds\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?zip=94040&appid=44ee963ea8384bd561e7cce2a9b68f08",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "zip",
+							"value": "94040"
+						},
+						{
+							"key": "appid",
+							"value": "44ee963ea8384bd561e7cce2a9b68f08"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cities within a rectangle zone",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\",function(){pm.response.to.have.status(200);\r",
+							"})\r",
+							"\r",
+							"\r",
+							"pm.test(\"Coordinates\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"coord\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"weather\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"weather\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"wind\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"wind\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"clouds\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"clouds\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/box/city?bbox=12,32,15,37&appid=44ee963ea8384bd561e7cce2a9b68f08",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"box",
+						"city"
+					],
+					"query": [
+						{
+							"key": "bbox",
+							"value": "12,32,15,37"
+						},
+						{
+							"key": "appid",
+							"value": "44ee963ea8384bd561e7cce2a9b68f08"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cities in circle",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\",function(){pm.response.to.have.status(200);\r",
+							"})\r",
+							"\r",
+							"\r",
+							"pm.test(\"Coordinates\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"coord\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"weather\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"weather\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"wind\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"wind\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"clouds\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"clouds\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/find?lat=13.1875&lon=13.1875&cnt=1&appid=44ee963ea8384bd561e7cce2a9b68f08",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"find"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "13.1875"
+						},
+						{
+							"key": "lon",
+							"value": "13.1875"
+						},
+						{
+							"key": "cnt",
+							"value": "1"
+						},
+						{
+							"key": "appid",
+							"value": "44ee963ea8384bd561e7cce2a9b68f08"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
